@@ -8,7 +8,7 @@ const http = require("http");
 const server = http.createServer(app);
 const { print } = require("./helper.js");
 /**************** Middelwares ****************/
-
+//
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -16,7 +16,8 @@ app.use(cors());
 const port = process.env.PORT || 5000;
 
 /********************* Mongoose connection ****************************/
-const connectionUrl = "mongodb://localhost:27017/testDb";
+const connectionUrl =
+  "mongodb+srv://pasteadmin:1v33m9ykwQ4IgHhb@cluster0.unnwqwz.mongodb.net/?retryWrites=true&w=majority"; //"mongodb://localhost:27017/testDb";
 
 mongoose
   .connect(connectionUrl)
